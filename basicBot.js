@@ -176,7 +176,7 @@
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         settings: {
-            botName: "basicBot",
+            botName: "SolidBot",
             language: "english",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
             maximumAfk: 120,
@@ -472,22 +472,22 @@
                     case "ambassador":
                         rankInt = 7;
                         break;
-                    case "host":
+                    case "Owner":
                         rankInt = 5;
                         break;
-                    case "cohost":
+                    case "Administrator":
                         rankInt = 4;
                         break;
-                    case "manager":
+                    case "Moderator":
                         rankInt = 3;
                         break;
-                    case "bouncer":
+                    case "Rookie":
                         rankInt = 2;
                         break;
                     case "residentdj":
                         rankInt = 1;
                         break;
-                    case "user":
+                    case "Member":
                         rankInt = 0;
                         break;
                 }
@@ -1241,7 +1241,7 @@
 
             activeCommand: {
                 command: 'active',
-                rank: 'bouncer',
+                rank: 'Rookie',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1269,7 +1269,7 @@
 
             addCommand: {
                 command: 'add',
-                rank: 'mod',
+                rank: 'Moderator',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1293,7 +1293,7 @@
 
             afklimitCommand: {
                 command: 'afklimit',
-                rank: 'manager',
+                rank: 'Administrator',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1313,7 +1313,7 @@
 
             afkremovalCommand: {
                 command: 'afkremoval',
-                rank: 'mod',
+                rank: 'Moderator',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1337,7 +1337,7 @@
 
             afkresetCommand: {
                 command: 'afkreset',
-                rank: 'bouncer',
+                rank: 'Rookie',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1356,7 +1356,7 @@
 
             afktimeCommand: {
                 command: 'afktime',
-                rank: 'bouncer',
+                rank: 'Rookie',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1377,7 +1377,7 @@
 
             autoskipCommand: {
                 command: 'autoskip',
-                rank: 'mod',
+                rank: 'Moderator',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1398,7 +1398,7 @@
 
             autowootCommand: {
                 command: 'autowoot',
-                rank: 'user',
+                rank: 'Member',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1411,7 +1411,7 @@
 
             baCommand: {
                 command: 'ba',
-                rank: 'user',
+                rank: 'Member',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1424,7 +1424,7 @@
 
             banCommand: {
                 command: 'ban',
-                rank: 'bouncer',
+                rank: 'Administrator',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1442,7 +1442,7 @@
 
             blacklistCommand: {
                 command: ['blacklist', 'bl'],
-                rank: 'bouncer',
+                rank: 'Moderator',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1474,7 +1474,7 @@
 
             bouncerPlusCommand: {
                 command: 'bouncer+',
-                rank: 'mod',
+                rank: 'Moderator',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1502,7 +1502,7 @@
 
             clearchatCommand: {
                 command: 'clearchat',
-                rank: 'manager',
+                rank: 'Moderatorr',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1519,7 +1519,7 @@
 
             commandsCommand: {
                 command: 'commands',
-                rank: 'user',
+                rank: 'Member',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1532,7 +1532,7 @@
 
             cookieCommand: {
                 command: 'cookie',
-                rank: 'user',
+                rank: 'Member',
                 type: 'startsWith',
                 cookies: ['has given you a chocolate chip cookie!',
                     'has given you a soft homemade oatmeal cookie!',
@@ -1589,7 +1589,7 @@
 
             cycleCommand: {
                 command: 'cycle',
-                rank: 'manager',
+                rank: 'Administrator',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1602,7 +1602,7 @@
 
             cycleguardCommand: {
                 command: 'cycleguard',
-                rank: 'bouncer',
+                rank: 'Moderator',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1623,7 +1623,7 @@
 
             cycletimerCommand: {
                 command: 'cycletimer',
-                rank: 'manager',
+                rank: 'Administratorr',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1643,7 +1643,7 @@
 
             dclookupCommand: {
                 command: ['dclookup', 'dc'],
-                rank: 'user',
+                rank: 'Member',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1667,7 +1667,7 @@
 
             deletechatCommand: {
                 command: 'deletechat',
-                rank: 'mod',
+                rank: 'Moderator',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1693,7 +1693,7 @@
 
             emojiCommand: {
                 command: 'emoji',
-                rank: 'user',
+                rank: 'Member',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1707,7 +1707,7 @@
 
             etaCommand: {
                 command: 'eta',
-                rank: 'user',
+                rank: 'Rookie',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1734,7 +1734,7 @@
 
             fbCommand: {
                 command: 'fb',
-                rank: 'user',
+                rank: 'Member',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1748,7 +1748,7 @@
 
             filterCommand: {
                 command: 'filter',
-                rank: 'bouncer',
+                rank: 'Moderator',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1768,7 +1768,7 @@
 
             helpCommand: {
                 command: 'help',
-                rank: 'user',
+                rank: 'Memberr',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1782,7 +1782,7 @@
 
             joinCommand: {
                 command: 'join',
-                rank: 'user',
+                rank: 'Member',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1798,7 +1798,7 @@
 
             jointimeCommand: {
                 command: 'jointime',
-                rank: 'bouncer',
+                rank: 'Rookie',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1819,7 +1819,7 @@
 
             kickCommand: {
                 command: 'kick',
-                rank: 'bouncer',
+                rank: 'Rookie',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1864,7 +1864,7 @@
 
             killCommand: {
                 command: 'kill',
-                rank: 'bouncer',
+                rank: 'Administrator',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1882,7 +1882,7 @@
 
             leaveCommand: {
                 command: 'leave',
-                rank: 'user',
+                rank: 'Member',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1899,7 +1899,7 @@
 
             linkCommand: {
                 command: 'link',
-                rank: 'user',
+                rank: 'Member',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1929,7 +1929,7 @@
 
             lockCommand: {
                 command: 'lock',
-                rank: 'mod',
+                rank: 'Moderator',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1942,7 +1942,7 @@
 
             lockdownCommand: {
                 command: 'lockdown',
-                rank: 'mod',
+                rank: 'Moderator',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1960,7 +1960,7 @@
 
             lockguardCommand: {
                 command: 'lockguard',
-                rank: 'bouncer',
+                rank: 'Rookie',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1980,7 +1980,7 @@
 
             lockskipCommand: {
                 command: 'lockskip',
-                rank: 'bouncer',
+                rank: 'Moderator',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2049,7 +2049,7 @@
 
             lockskipposCommand: {
                 command: 'lockskippos',
-                rank: 'manager',
+                rank: 'Administator',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2068,7 +2068,7 @@
 
             locktimerCommand: {
                 command: 'locktimer',
-                rank: 'manager',
+                rank: 'Administrator',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2087,7 +2087,7 @@
 
             maxlengthCommand: {
                 command: 'maxlength',
-                rank: 'manager',
+                rank: 'Administrator',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2106,7 +2106,7 @@
 
             motdCommand: {
                 command: 'motd',
-                rank: 'bouncer',
+                rank: 'Owner',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2130,7 +2130,7 @@
 
             moveCommand: {
                 command: 'move',
-                rank: 'mod',
+                rank: 'Moderator',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2163,7 +2163,7 @@
 
             muteCommand: {
                 command: 'mute',
-                rank: 'bouncer',
+                rank: 'Moderator',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2253,7 +2253,7 @@
 
             opCommand: {
                 command: 'op',
-                rank: 'user',
+                rank: 'Memberr',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2267,7 +2267,7 @@
 
             pingCommand: {
                 command: 'ping',
-                rank: 'user',
+                rank: 'Member',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2280,7 +2280,7 @@
 
             refreshCommand: {
                 command: 'refresh',
-                rank: 'manager',
+                rank: 'Owner',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2298,7 +2298,7 @@
 
             reloadCommand: {
                 command: 'reload',
-                rank: 'bouncer',
+                rank: 'Moderator',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2317,7 +2317,7 @@
 
             removeCommand: {
                 command: 'remove',
-                rank: 'mod',
+                rank: 'Moderator',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2348,7 +2348,7 @@
 
             restrictetaCommand: {
                 command: 'restricteta',
-                rank: 'bouncer',
+                rank: 'Rookie',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2368,7 +2368,7 @@
 
             rouletteCommand: {
                 command: 'roulette',
-                rank: 'mod',
+                rank: 'Owner',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2383,7 +2383,7 @@
 
             rulesCommand: {
                 command: 'rules',
-                rank: 'user',
+                rank: 'Member',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2397,7 +2397,7 @@
 
             sessionstatsCommand: {
                 command: 'sessionstats',
-                rank: 'bouncer',
+                rank: 'Rookie',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2414,7 +2414,7 @@
 
             skipCommand: {
                 command: 'skip',
-                rank: 'bouncer',
+                rank: 'Moderatorr',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2433,7 +2433,7 @@
 
             songstatsCommand: {
                 command: 'songstats',
-                rank: 'mod',
+                rank: 'Rookie',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2453,7 +2453,7 @@
 
             sourceCommand: {
                 command: 'source',
-                rank: 'user',
+                rank: 'Member',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2466,7 +2466,7 @@
 
             statusCommand: {
                 command: 'status',
-                rank: 'bouncer',
+                rank: 'Rookie',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
